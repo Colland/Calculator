@@ -1,0 +1,82 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 450px;
+    height: 550px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.5)
+}
+
+#screen {
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;  
+    height: 60px; 
+    background-color: white;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+#screenText {
+    float: right;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+#gridContainer button {
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    font-size: 18px;
+    background-color: white;
+}
+
+#gridContainer button:hover
+{
+    cursor: pointer;
+    background-color: #eaeaea;
+}
+
+#gridContainer button:active {
+    box-shadow: 0 0 0 #000000, inset 1.5px 1.5px 1.5px #000000;
+    transform: translate(2px, 2px);
+}
+
+#equals {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+#fullClear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
