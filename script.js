@@ -125,7 +125,7 @@ function backSpace()
 
     if(!Number.isNaN(b))
     {
-        if(numArray[numCounter-1].length === 1)
+        if(String(numArray[numCounter-1]).length === 1)
         {
             numArray.pop();
             numCounter -= 1;
