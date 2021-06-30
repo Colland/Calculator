@@ -3,6 +3,7 @@ let operationArray = [];
 let numCounter = 0;
 let operationCounter = 0;
 let lastClickClass;
+let lastClickID;
 
 const screen = document.querySelector("#screenText");
 
@@ -35,7 +36,7 @@ function buttonClicked(e)
             {
 
             }
-            else if(g === '.')
+            else if(isNaN(g))
             {
 
             }
@@ -75,7 +76,7 @@ function buttonClicked(e)
     else if(e.target.className === 'operations')
     {
         //Prevents consecutive operation inputs
-        if(lastClickClass === 'operations')
+        if(lastClickClass === 'operations' || lastClickID === 'decimal')
         {
             
         }
@@ -149,6 +150,7 @@ function buttonClicked(e)
     }
 
     lastClickClass = e.target.className;
+    lastClickID = e.target.id;
 }
 
 function clear()
